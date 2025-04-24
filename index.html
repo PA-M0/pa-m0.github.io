@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Social Icons</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            /* Base Styles */
+            /* body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #f8f9fa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                padding: 20px;
+                flex-direction: column;
+            } */
+            
+            .social-container {
+                display: flex;
+                gap: 25px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            /* Navigation Bar */
+            /* nav {
+                background: white;
+                padding: 1rem 2rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+            }
+
+            nav ul {
+                display: flex;
+                list-style: none;
+                justify-content: flex-end;
+                gap: 2rem;
+            }
+
+            nav a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+            nav a:hover {
+                color: #2c82c9;
+            } */
+
+            /* Main Content */
+            .container {
+                display: flex;
+                padding: 2rem;
+                gap: 2rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-column {
+                flex: 2;
+            }
+
+            /* Icon Card Styles */
+            .social-card {
+                width: 80px;
+                height: 80px;
+                background: white;
+                border-radius: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                cursor: pointer;
+            }
+            
+            .social-card::before {
+                content: '';
+                position: absolute;
+                width: 120%;
+                height: 120%;
+                background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.3) 100%);
+                transform: rotate(45deg);
+                top: -10%;
+                left: -100%;
+                transition: all 0.6s ease;
+            }
+            
+            .social-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            }
+            
+            .social-card:hover::before {
+                left: 100%;
+            }
+            
+            /* Individual Icon Styles */
+            .social-icon {
+                font-size: 32px;
+                position: relative;
+                z-index: 2;
+                transition: all 0.4s ease;
+            }
+            
+            .social-card:hover .social-icon {
+                transform: scale(1.2);
+            }
+            
+            /* LinkedIn */
+            .linkedin {
+                color: #0077b5;
+                background: rgba(0, 119, 181, 0.1);
+            }
+            
+            .linkedin:hover {
+                background: #0077b5;
+                color: white;
+            }
+            
+            /* Email */
+            .email {
+                color: #D44638;
+                background: rgba(212, 70, 56, 0.1);
+            }
+            
+            .email:hover {
+                background: #D44638;
+                color: white;
+            }
+            
+            /* Telegram */
+            .telegram {
+                color: #0088cc;
+                background: rgba(0, 136, 204, 0.1);
+            }
+            
+            .telegram:hover {
+                background: #0088cc;
+                color: white;
+            }
+            
+            /* Tooltip */
+            .social-card::after {
+                content: attr(data-tooltip);
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #333;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 12px;
+                opacity: 0;
+                transition: all 0.3s ease;
+                width: max-content;
+            }
+            
+            .social-card:hover::after {
+                opacity: 1;
+                bottom: -30px;
+            }
+            
+            /* Responsive */
+            @media (max-width: 600px) {
+                .social-card {
+                    width: 70px;
+                    height: 70px;
+                }
+                
+                .social-icon {
+                    font-size: 28px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="section">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <section id="about" class="section">
+                <h1 style="font-size: 44px;">.LOGO</h1>
+                <div style="display: flex; justify-content: space-around;">
+                    <p class="about-text" style="width: 50%;">
+                        I recently found my interest in web front design, before that I was able to get a good understanding 
+                        of programming thinking by learning Java and OOP. I am currently learning JavaScript frameworks 
+                        and I have a good understanding of the basics of front-end. I am very interested in gaining new 
+                        experiences in a practical workplace, to improve my skills for the advancement of the organization.
+                    </p>
+                    <img width="240" height="280"  alt="profile_image" src="./assets/GetProfileImage (2).jfif"/>
+                </div>
+            </section>
+
+            <div class="social-container">
+                <!-- LinkedIn -->
+                <a  target="_blank" class="social-card linkedin" data-tooltip="Connect on LinkedIn">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:YOUR_EMAIL@gmail.com" class="social-card email" data-tooltip="Send me an email">
+                    <i class="fas fa-envelope social-icon"></i>
+                </a>
+                
+                <!-- Telegram -->
+                <a target="_blank" class="social-card telegram" data-tooltip="Message me on Telegram">
+                    <i class="fab fa-telegram-plane social-icon"></i>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
