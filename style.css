@@ -254,3 +254,18 @@ a {
         min-width: 250px;
     }
 }
+
+
+.high-contrast {
+    color: #3a3a3a;
+}
+
+.education-item > .date,
+.work-item > .date {
+    color: #3a3a3a;
+}
+
+.date {
+    color: #3a3a3a; /* تغییر رنگ برای کنتراست بهتر */
+    font-size: 0.9rem;
+}
